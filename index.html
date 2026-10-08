@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1110" />
+    <link rel="icon" href="/roadgrids-icon.png" type="image/png" />
+    <meta
+      name="description"
+      content="AI-native HD and ADAS map intelligence for commercial mobility. Precision road data, automated cartography and day-level updates."
+    />
+    <title>ROADGRIDS — Maps that think ahead</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+
+    <div class="announcement">
+      <div class="container announcement__inner">
+        <span class="pulse-dot"></span>
+        <span data-i18n="announcement">Fresh road intelligence, now delivered at T+1</span>
+        <a href="#platform" data-i18n="announcementLink">See the pipeline</a>
+      </div>
+    </div>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="ROADGRIDS home">
+          <img class="brand-icon" src="/roadgrids-icon.png" alt="" aria-hidden="true" />
+          <span>ROADGRIDS</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#platform" data-i18n="navPlatform">Platform</a>
+          <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+          <a href="#technology" data-i18n="navTechnology">Technology</a>
+          <a href="#company" data-i18n="navCompany">Company</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="button button--dark button--small js-open-modal" type="button" data-i18n="navCta">
+            Request access
+          </button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
+            <span></span><span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <a href="#platform" data-i18n="navPlatform">Platform</a>
+        <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+        <a href="#technology" data-i18n="navTechnology">Technology</a>
+        <a href="#company" data-i18n="navCompany">Company</a>
+        <button class="button button--acid js-open-modal" type="button" data-i18n="navCta">Request access</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__copy reveal">
+            <div class="eyebrow"><span>01</span><span data-i18n="heroEyebrow">AI-native geospatial intelligence</span></div>
+            <h1 data-i18n="heroTitle"><span>Mapping the</span><span><em>road ahead.</em></span></h1>
+            <p class="hero__lede" data-i18n="heroLede">
+              Precision road intelligence for commercial mobility — fused from survey fleets, crowdsourced signals and AI cartography.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--acid" href="#platform">
+                <span data-i18n="heroCta1">Explore the platform</span>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>
+              </a>
+              <button class="text-button js-open-modal" type="button">
+                <span class="play-icon"><svg viewBox="0 0 18 18" aria-hidden="true"><path d="m7 5 5 4-5 4V5Z" /></svg></span>
+                <span data-i18n="heroCta2">Book a data demo</span>
+              </button>
+            </div>
+            <div class="hero__meta">
+              <div><strong>&lt;30<small>cm</small></strong><span data-i18n="metricPrecision">feature precision</span></div>
+              <div><strong>T+1</strong><span data-i18n="metricFreshness">data freshness</span></div>
+              <div><strong>ADAS→HD</strong><span data-i18n="metricCoverage">multi-level output</span></div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal reveal--delay" aria-label="Animated precision road map visualization">
+            <div class="visual-label visual-label--top">
+              <span class="pulse-dot"></span>
+              <span>LIVE MAP / SG-04</span>
+            </div>
+            <div class="map-scene">
+              <div class="map-grid"></div>
+              <svg class="road-network" viewBox="0 0 700 760" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <defs>
+                  <filter id="glow"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+                  <linearGradient id="routeGradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b7ff34"/><stop offset="1" stop-color="#54e7d6"/></linearGradient>
+                </defs>
+                <g class="blocks">
+                  <path d="M-30 110 210-20 320 45 80 175Z"/><path d="m115 210 230-124 91 58-226 128Z"/>
+                  <path d="m265 307 236-126 112 74-236 129Z"/><path d="m420 420 220-120 118 88-225 122Z"/>
+                  <path d="M-55 340 82 266l111 72-138 77Z"/><path d="m88 470 150-82 113 80-151 86Z"/>
+                  <path d="m226 596 150-84 126 91-157 88Z"/><path d="m-35 620 128-72 113 82-129 75Z"/>
+                </g>
+                <g class="minor-roads">
+                  <path d="M-40 188 515-112"/><path d="M18 275 586-33"/><path d="M73 379 665 58"/>
+                  <path d="M132 486 725 165"/><path d="M182 591 780 267"/><path d="M-50 507 295 760"/>
+                  <path d="M45 320 460 625"/><path d="M170 160 622 493"/>
+                </g>
+                <path class="main-road main-road--shadow" d="M-70 742C72 616 72 521 204 444s169-116 244-212S532 74 744-20"/>
+                <path class="main-road" d="M-70 742C72 616 72 521 204 444s169-116 244-212S532 74 744-20"/>
+                <path class="route" d="M-70 742C72 616 72 521 204 444s169-116 244-212S532 74 744-20"/>
+                <g class="road-nodes">
+                  <circle cx="97" cy="578" r="5"/><circle cx="204" cy="444" r="5"/><circle cx="352" cy="337" r="5"/><circle cx="448" cy="232" r="5"/><circle cx="532" cy="105" r="5"/>
+                </g>
+              </svg>
+              <div class="scan-line"></div>
+              <div class="vehicle-marker">
+                <span class="vehicle-pulse"></span>
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 9 23-9-5-9 5L16 3Z" /></svg>
+              </div>
+              <div class="map-card map-card--precision">
+                <span>ABS PRECISION</span><strong>0.27 m</strong><i>± 0.03</i>
+              </div>
+              <div class="map-card map-card--objects">
+                <span>OBJECT LAYERS</span>
+                <div><i></i><i></i><i></i><i></i><i></i></div>
+                <strong>42</strong>
+              </div>
+              <div class="coordinates">01°18' N&nbsp;&nbsp; 103°51' E</div>
+            </div>
+            <div class="visual-footer">
+              <span>VECTOR TILE 18 / 310489</span>
+              <span class="status"><i></i> SYNCED 14:32:08</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero__side-note">SCROLL TO EXPLORE <i></i></div>
+      </section>
+
+      <section class="trust-strip" aria-label="Capabilities">
+        <div class="container trust-strip__inner">
+          <p data-i18n="trustedBy">Built for the systems moving the world</p>
+          <div class="trust-items">
+            <span><i class="trust-icon">◆</i> COMMERCIAL FLEETS</span>
+            <span><i class="trust-icon">◫</i> ADAS SYSTEMS</span>
+            <span><i class="trust-icon">⌁</i> AUTONOMOUS OPS</span>
+            <span><i class="trust-icon">◉</i> DIGITAL TWINS</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--platform" id="platform">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <div class="eyebrow eyebrow--dark"><span>02</span><span data-i18n="platformEyebrow">One continuous data loop</span></div>
+              <h2 data-i18n="platformTitle">From road reality<br />to machine intelligence.</h2>
+            </div>
+            <p data-i18n="platformIntro">
+              A full-stack map production system that observes, understands, updates and delivers the road — without breaking the data chain.
+            </p>
+          </div>
+
+          <div class="pipeline reveal">
+            <article class="pipeline-step is-active" data-step="0" tabindex="0">
+              <div class="step-top"><span>01</span><svg viewBox="0 0 24 24"><path d="M4 17V8l8-4 8 4v9l-8 4-8-4Z"/><path d="m4 8 8 4 8-4M12 12v9"/></svg></div>
+              <h3 data-i18n="observeTitle">Observe</h3>
+              <p data-i18n="observeBody">Multi-sensor survey rigs and fleet signals capture precise road geometry at scale.</p>
+              <div class="step-progress"><i></i></div>
+            </article>
+            <article class="pipeline-step" data-step="1" tabindex="0">
+              <div class="step-top"><span>02</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M4 12h16M12 4c3 3 3 13 0 16M12 4c-3 3-3 13 0 16"/></svg></div>
+              <h3 data-i18n="understandTitle">Understand</h3>
+              <p data-i18n="understandBody">Vision, point-cloud and trajectory models turn raw signals into road semantics.</p>
+              <div class="step-progress"><i></i></div>
+            </article>
+            <article class="pipeline-step" data-step="2" tabindex="0">
+              <div class="step-top"><span>03</span><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 14-5M20 4v5h-5M20 12a8 8 0 0 1-14 5M4 20v-5h5"/></svg></div>
+              <h3 data-i18n="updateTitle">Update</h3>
+              <p data-i18n="updateBody">Cloud orchestration fuses crowdsourced changes into a day-level refresh cycle.</p>
+              <div class="step-progress"><i></i></div>
+            </article>
+            <article class="pipeline-step" data-step="3" tabindex="0">
+              <div class="step-top"><span>04</span><svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM9 1v8H1M15 23v-8h8"/></svg></div>
+              <h3 data-i18n="deliverTitle">Deliver</h3>
+              <p data-i18n="deliverBody">ADAS, HD and custom layers arrive ready for onboard and cloud deployment.</p>
+              <div class="step-progress"><i></i></div>
+            </article>
+          </div>
+
+          <div class="data-console reveal">
+            <div class="console-toolbar">
+              <div><span class="console-dot console-dot--red"></span><span class="console-dot console-dot--yellow"></span><span class="console-dot console-dot--green"></span></div>
+              <span>ROADGRIDS / MAP INTELLIGENCE ENGINE</span>
+              <span>BUILD 26.10</span>
+            </div>
+            <div class="console-grid">
+              <div class="console-view">
+                <div class="console-badge"><i></i> LIVE INGEST</div>
+                <svg viewBox="0 0 700 320" preserveAspectRatio="none" aria-hidden="true">
+                  <g class="console-lines"><path d="M0 277 190 148l88 45 143-96 279 119"/><path d="M0 235 190 106l88 45 143-96 279 119"/><path d="M115 320 280 195M320 320 440 190M496 320 600 210"/></g>
+                  <path class="console-route" d="M0 255 190 126l88 45 143-96 279 119"/>
+                  <g class="console-points"><circle cx="190" cy="126" r="4"/><circle cx="278" cy="171" r="4"/><circle cx="421" cy="75" r="4"/><circle cx="600" cy="169" r="4"/></g>
+                </svg>
+                <div class="console-car"><span></span></div>
+              </div>
+              <div class="console-data">
+                <div class="data-row"><span>LANE_GEOMETRY</span><strong>99.8%</strong></div>
+                <div class="data-bar"><i style="width: 99.8%"></i></div>
+                <div class="data-row"><span>SIGN_SEMANTICS</span><strong>98.4%</strong></div>
+                <div class="data-bar"><i style="width: 98.4%"></i></div>
+                <div class="data-row"><span>GRADIENT_MODEL</span><strong>97.9%</strong></div>
+                <div class="data-bar"><i style="width: 97.9%"></i></div>
+                <div class="data-log">
+                  <p><span>14:32:05</span> tile_310489 validated</p>
+                  <p><span>14:32:06</span> topology graph rebuilt</p>
+                  <p><span>14:32:08</span> delta package published</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--solutions" id="solutions">
+        <div class="container solutions-layout">
+          <div class="solutions-sticky reveal">
+            <div class="eyebrow"><span>03</span><span data-i18n="solutionsEyebrow">Built for the road ahead</span></div>
+            <h2 data-i18n="solutionsTitle">One map stack.<br /><em>Every layer in sync.</em></h2>
+            <p data-i18n="solutionsIntro">Choose the precision and semantics your system needs, from energy-aware ADAS to centimeter-grade autonomy.</p>
+            <div class="solution-tabs" role="tablist" aria-label="Solution types">
+              <button class="solution-tab is-active" type="button" data-solution="adas" role="tab" aria-selected="true">ADAS MAP</button>
+              <button class="solution-tab" type="button" data-solution="hd" role="tab" aria-selected="false">HD MAP</button>
+              <button class="solution-tab" type="button" data-solution="update" role="tab" aria-selected="false">FRESHNESS</button>
+            </div>
+          </div>
+
+          <div class="solution-demo reveal reveal--delay">
+            <div class="solution-screen">
+              <div class="screen-toolbar"><span>ROAD INTELLIGENCE VIEWER</span><span id="solution-mode">ADAS / ENERGY</span></div>
+              <div class="road-demo" id="road-demo" data-mode="adas">
+                <div class="horizon"></div>
+                <div class="road-plane"><i class="lane lane--1"></i><i class="lane lane--2"></i><i class="lane lane--3"></i></div>
+                <div class="road-overlay road-overlay--slope"><span>+3.8%</span></div>
+                <div class="road-overlay road-overlay--limit"><span>80</span><small>km/h</small></div>
+                <div class="road-overlay road-overlay--curve"><span>R 420m</span></div>
+                <div class="road-overlay road-overlay--lane"><span>LANE 02</span></div>
+                <div class="demo-truck"><span></span><i></i></div>
+                <div class="screen-reticle"><i></i></div>
+                <div class="screen-coordinates">ALT 43.7m&nbsp;&nbsp; HDG 074.2°</div>
+              </div>
+              <div class="screen-bottom">
+                <div><span data-i18n="nextEvent">NEXT EVENT</span><strong id="demo-event">UPHILL / 1.2 KM</strong></div>
+                <div class="signal-bars"><i></i><i></i><i></i><i></i><i></i></div>
+              </div>
+            </div>
+            <div class="solution-copy">
+              <span class="solution-index">01 / 03</span>
+              <div>
+                <h3 id="solution-title">Energy-aware ADAS</h3>
+                <p id="solution-copy">Give commercial vehicles foresight into gradient, curvature, speed limits and heading — enabling predictive powertrain control and lower fuel consumption.</p>
+              </div>
+              <div class="solution-kpis" id="solution-kpis">
+                <div><strong>4D</strong><span>road semantics</span></div>
+                <div><strong>1m</strong><span>ADAS-grade</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--technology" id="technology">
+        <div class="container">
+          <div class="section-head section-head--light reveal">
+            <div>
+              <div class="eyebrow"><span>04</span><span data-i18n="techEyebrow">The intelligence underneath</span></div>
+              <h2 data-i18n="techTitle">AI cartography,<br />engineered to scale.</h2>
+            </div>
+            <p data-i18n="techIntro">Computer vision, point clouds and trajectory fusion work together in one production-grade spatial graph.</p>
+          </div>
+
+          <div class="tech-grid">
+            <article class="tech-card tech-card--large reveal">
+              <div class="tech-card__top"><span>01 / PERCEPTION</span><span class="live-tag"><i></i> LIVE</span></div>
+              <div class="point-cloud" aria-hidden="true">
+                <span style="--x:8%;--y:68%;--s:3px"></span><span style="--x:15%;--y:51%;--s:2px"></span><span style="--x:23%;--y:73%;--s:4px"></span><span style="--x:29%;--y:42%;--s:2px"></span><span style="--x:38%;--y:60%;--s:3px"></span><span style="--x:45%;--y:35%;--s:3px"></span><span style="--x:52%;--y:64%;--s:4px"></span><span style="--x:59%;--y:29%;--s:2px"></span><span style="--x:67%;--y:52%;--s:3px"></span><span style="--x:74%;--y:39%;--s:4px"></span><span style="--x:83%;--y:62%;--s:2px"></span><span style="--x:90%;--y:45%;--s:3px"></span>
+                <svg viewBox="0 0 600 200"><path d="M20 168 148 92l88 37 96-79 96 46 152-71"/><path d="m20 168 113-24 103-15 104 18 88-51 152 36"/><path d="M148 92v52M236 129v32M332 50v97M428 96v48"/></svg>
+                <div class="object-box object-box--1"><span>LANE MARKING / .98</span></div>
+                <div class="object-box object-box--2"><span>ROAD SIGN / .96</span></div>
+              </div>
+              <div class="tech-card__copy">
+                <h3 data-i18n="visionTitle">Spatial perception</h3>
+                <p data-i18n="visionBody">Stereo vision and LiDAR models extract lane geometry, signs, barriers and topology from every frame.</p>
+              </div>
+            </article>
+
+            <article class="tech-card reveal reveal--delay">
+              <div class="tech-card__top"><span>02 / FUSION</span><span>±0.03m</span></div>
+              <div class="fusion-orbit" aria-hidden="true"><i></i><i></i><i></i><span>FUSED</span></div>
+              <div class="tech-card__copy">
+                <h3 data-i18n="fusionTitle">Trajectory fusion</h3>
+                <p data-i18n="fusionBody">Cross-vehicle observations converge into one stable, confidence-scored road model.</p>
+              </div>
+            </article>
+
+            <article class="tech-card reveal">
+              <div class="tech-card__top"><span>03 / PRODUCTION</span><span>AUTO-QA</span></div>
+              <div class="layers-visual" aria-hidden="true"><i></i><i></i><i></i><span>42 OBJECT LAYERS</span></div>
+              <div class="tech-card__copy">
+                <h3 data-i18n="cartographyTitle">Automated cartography</h3>
+                <p data-i18n="cartographyBody">AI-assisted production and human-in-the-loop QA turn map deltas into deployment-ready data.</p>
+              </div>
+            </article>
+
+            <article class="tech-card tech-card--accent reveal reveal--delay">
+              <div class="tech-card__top"><span>04 / DELIVERY</span><span>API + SDK</span></div>
+              <div class="delivery-code" aria-hidden="true">
+                <p><span>GET</span> /v2/tiles/310489</p><p>&nbsp;&nbsp;precision: <b>"hd"</b></p><p>&nbsp;&nbsp;layers: [<b>"slope"</b>,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;<b>"lane"</b>, <b>"sign"</b>]</p><p class="code-success">200 / delta synced</p>
+              </div>
+              <div class="tech-card__copy">
+                <h3 data-i18n="deliveryTitle">Deployment ready</h3>
+                <p data-i18n="deliveryBody">Serve vector tiles, route attributes or custom datasets directly to cloud and vehicle systems.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--outcomes">
+        <div class="container">
+          <div class="outcomes-intro reveal">
+            <div class="eyebrow eyebrow--dark"><span>05</span><span data-i18n="outcomesEyebrow">Real-world impact</span></div>
+            <h2 data-i18n="outcomesTitle">Make every vehicle<br />more aware.</h2>
+          </div>
+          <div class="outcome-list">
+            <article class="outcome-row reveal">
+              <span class="outcome-num">01</span>
+              <div class="outcome-icon"><svg viewBox="0 0 40 40"><path d="M5 27h30M9 27l3-11h16l3 11M14 27v4M26 27v4M15 21h10"/></svg></div>
+              <h3 data-i18n="outcome1Title">Predictive efficiency</h3>
+              <p data-i18n="outcome1Body">Road gradient and curvature feed the powertrain before the vehicle reaches them.</p>
+              <span class="outcome-tag">COMMERCIAL FLEETS</span>
+            </article>
+            <article class="outcome-row reveal">
+              <span class="outcome-num">02</span>
+              <div class="outcome-icon"><svg viewBox="0 0 40 40"><path d="m20 5 13 6v8c0 8-5 13-13 16C12 32 7 27 7 19v-8l13-6Z"/><path d="m14 20 4 4 8-9"/></svg></div>
+              <h3 data-i18n="outcome2Title">Beyond-line-of-sight safety</h3>
+              <p data-i18n="outcome2Body">Semantic road data fills perception gaps in bad weather, low light and occluded scenes.</p>
+              <span class="outcome-tag">ADAS & AUTONOMY</span>
+            </article>
+            <article class="outcome-row reveal">
+              <span class="outcome-num">03</span>
+              <div class="outcome-icon"><svg viewBox="0 0 40 40"><path d="M5 31 13 9l9 18 6-12 7 16M8 26h24"/></svg></div>
+              <h3 data-i18n="outcome3Title">Road-level context</h3>
+              <p data-i18n="outcome3Body">Lane class, speed policy and topology add the meaning cameras alone cannot reliably see.</p>
+              <span class="outcome-tag">MAP INTELLIGENCE</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="company" id="company">
+        <div class="company-orb" aria-hidden="true"></div>
+        <div class="container company__inner reveal">
+          <div class="eyebrow"><span>06</span><span data-i18n="companyEyebrow">A different kind of map company</span></div>
+          <h2 data-i18n="companyTitle">The road changes<br />every second.<br /><em>The map keeps up.</em></h2>
+          <p data-i18n="companyBody">We unite geospatial production, applied AI and mobility engineering to build living road intelligence for the next generation of commercial transport.</p>
+          <button class="button button--light js-open-modal" type="button">
+            <span data-i18n="companyCta">Build with RoadGrids</span>
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <a class="brand brand--footer" href="#top"><img class="brand-icon" src="/roadgrids-icon.png" alt="" aria-hidden="true" /><span>ROADGRIDS</span></a>
+          <p data-i18n="footerTagline">Living road intelligence<br />for autonomous mobility.</p>
+          <a class="footer-email" href="mailto:contact@roadgrids.com">contact@roadgrids.com <span>↗</span></a>
+        </div>
+        <div class="footer__grid">
+          <div><span data-i18n="footerPlatform">PLATFORM</span><button class="footer-link" type="button" data-detail="map-engine">Map Engine</button><button class="footer-link" type="button" data-detail="data-pipeline">Data Pipeline</button><button class="footer-link" type="button" data-detail="developer-api">Developer API</button></div>
+          <div><span data-i18n="footerSolutions">SOLUTIONS</span><button class="footer-link" type="button" data-detail="adas-map">ADAS Map</button><button class="footer-link" type="button" data-detail="hd-map">HD Map</button><button class="footer-link" type="button" data-detail="fleet-intelligence">Fleet Intelligence</button></div>
+          <div><span data-i18n="footerCompany">COMPANY</span><button class="footer-link" type="button" data-detail="about">About</button><a href="mailto:contact@roadgrids.com?subject=Careers%20at%20ROADGRIDS">Careers</a><button class="footer-link js-open-modal" type="button">Contact</button></div>
+          <div class="footer-location"><span data-i18n="footerPresence">GLOBAL PRESENCE</span><p>Singapore<br />APAC delivery hub</p><p>Serving mobility teams worldwide</p></div>
+        </div>
+        <div class="footer__bottom"><span>© 2026 ROADGRIDS. ALL RIGHTS RESERVED.</span><span class="footer-legal"><button type="button" data-detail="privacy">PRIVACY</button><button type="button" data-detail="terms">TERMS</button></span><a href="#top">BACK TO TOP ↑</a></div>
+      </div>
+    </footer>
+
+    <dialog class="demo-modal" id="demo-modal">
+      <button class="modal-close" type="button" aria-label="Close modal">×</button>
+      <div class="modal-grid">
+        <div class="modal-aside">
+          <div class="brand brand--modal"><img class="brand-icon" src="/roadgrids-icon.png" alt="" aria-hidden="true" /><span>ROADGRIDS</span></div>
+          <div>
+            <span class="modal-kicker">DATA DEMO / 30 MIN</span>
+            <h2 data-i18n="modalTitle">See your road data come alive.</h2>
+            <p data-i18n="modalBody">Tell us your application and precision needs. We’ll tailor a live walkthrough of the map stack.</p>
+          </div>
+          <div class="modal-meta"><span>&lt; 1 business day</span><small data-i18n="modalResponse">Typical response time</small></div>
+        </div>
+        <form class="demo-form" id="demo-form">
+          <label><span data-i18n="formName">YOUR NAME</span><input required name="name" autocomplete="name" placeholder="Alex Chen" /></label>
+          <label><span data-i18n="formEmail">WORK EMAIL</span><input required name="email" type="email" autocomplete="email" placeholder="alex@company.com" /></label>
+          <label><span data-i18n="formCompany">COMPANY</span><input required name="company" autocomplete="organization" placeholder="Company name" /></label>
+          <label><span data-i18n="formUseCase">PRIMARY USE CASE</span><select name="usecase"><option>Commercial fleet / ADAS</option><option>Autonomous driving</option><option>Map & location platform</option><option>Digital twin</option></select></label>
+          <label><span data-i18n="formMessage">WHAT ARE YOU BUILDING?</span><textarea name="message" rows="3" placeholder="A short note about your project..."></textarea></label>
+          <button class="button button--acid button--submit" type="submit"><span data-i18n="formSubmit">Request my demo</span><svg viewBox="0 0 20 20"><path d="M4 10h11M11 6l4 4-4 4"/></svg></button>
+          <p class="form-note" data-i18n="formNote">By submitting, you agree to be contacted about RoadGrids products.</p>
+        </form>
+        <div class="form-success" aria-hidden="true">
+          <span class="success-mark">✓</span>
+          <h3 data-i18n="successTitle">Request received.</h3>
+          <p data-i18n="successBody">Our mapping team will be in touch within one business day.</p>
+          <button class="text-button modal-done" type="button" data-i18n="successDone">Done</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="detail-modal" id="detail-modal">
+      <button class="detail-close" type="button" aria-label="Close details">×</button>
+      <div class="detail-modal__accent"></div>
+      <div class="detail-modal__body">
+        <div class="detail-modal__head">
+          <span id="detail-kicker">PLATFORM / 01</span>
+          <span>ROADGRIDS</span>
+        </div>
+        <h2 id="detail-title">Map Intelligence Engine</h2>
+        <p id="detail-copy"></p>
+        <div class="detail-points" id="detail-points"></div>
+        <div class="detail-modal__actions">
+          <button class="button button--dark js-detail-demo" type="button">Request a demo <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg></button>
+          <span>Response within one business day</span>
+        </div>
+      </div>
+    </dialog>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
