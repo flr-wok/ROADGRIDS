@@ -206,7 +206,12 @@
                 <div class="console-world" aria-hidden="true">
                   <div class="console-road console-road--left"></div>
                   <div class="console-road console-road--right"></div>
-                  <div class="console-vehicle"><i class="vehicle-roof"></i><i class="vehicle-body"></i><i class="vehicle-light vehicle-light--l"></i><i class="vehicle-light vehicle-light--r"></i></div>
+                  <div class="console-vehicle">
+                    <span class="console-wheel console-wheel--left"></span><span class="console-wheel console-wheel--right"></span>
+                    <span class="console-hood"></span><span class="console-glass"></span><span class="console-rear-glass"></span>
+                    <span class="console-light console-light--left"></span><span class="console-light console-light--right"></span>
+                    <span class="console-mirror console-mirror--left"></span><span class="console-mirror console-mirror--right"></span>
+                  </div>
                   <div class="console-radar"><i></i><i></i><i></i></div>
                   <div class="console-beacon console-beacon--1"><span>SIGN / 98.4%</span></div>
                   <div class="console-beacon console-beacon--2"><span>LANE / 99.8%</span></div>
@@ -263,9 +268,10 @@
                 <div class="sensor-field" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
                 <div class="vehicle-3d" aria-hidden="true">
                   <div class="vehicle-shadow"></div>
-                  <div class="vehicle-cabin"><span class="vehicle-windshield"></span></div>
-                  <div class="vehicle-shell"><span class="vehicle-light vehicle-light--left"></span><span class="vehicle-light vehicle-light--right"></span></div>
-                  <span class="vehicle-wheel vehicle-wheel--left"></span><span class="vehicle-wheel vehicle-wheel--right"></span>
+                  <span class="vehicle-wheel vehicle-wheel--front-left"></span><span class="vehicle-wheel vehicle-wheel--front-right"></span><span class="vehicle-wheel vehicle-wheel--rear-left"></span><span class="vehicle-wheel vehicle-wheel--rear-right"></span>
+                  <div class="vehicle-shell"><span class="vehicle-grille"></span><span class="vehicle-light vehicle-light--left"></span><span class="vehicle-light vehicle-light--right"></span></div>
+                  <div class="vehicle-cabin"><span class="vehicle-windshield"></span><span class="vehicle-roof-glass"></span><span class="vehicle-rear-glass"></span></div>
+                  <span class="vehicle-mirror vehicle-mirror--left"></span><span class="vehicle-mirror vehicle-mirror--right"></span>
                   <span class="lidar-unit"><i></i></span>
                 </div>
                 <div class="lidar-fan" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
@@ -306,17 +312,26 @@
             <article class="tech-card tech-card--large reveal">
               <div class="tech-card__top"><span>01 / PERCEPTION</span><span class="live-tag"><i></i> LIVE</span></div>
               <div class="point-cloud perception-scene" aria-hidden="true">
-                <div class="perception-title"><strong>AI ROAD RECOGNITION</strong><span>CAMERA + LiDAR / LIVE</span></div>
-                <svg class="perception-map" viewBox="0 0 1000 360" preserveAspectRatio="none">
-                  <path class="road-area" d="M342 360 C360 302 391 254 435 209 C468 176 486 143 492 103 C505 145 533 178 568 213 C611 256 642 305 662 360 Z" />
-                  <path class="road-edge" d="M342 360 C360 302 391 254 435 209 C468 176 486 143 492 103" />
-                  <path class="road-edge" d="M662 360 C642 305 611 256 568 213 C533 178 505 145 492 103" />
-                  <path class="road-center" d="M502 360 C497 305 494 255 497 211 C499 169 495 134 492 103" />
-                </svg>
-                <div class="perception-tag perception-tag--edge"><b>ROAD EDGE</b><span>99.2%</span></div>
-                <div class="perception-tag perception-tag--lane"><b>LANE CENTER</b><span>98.8%</span></div>
-                <div class="perception-tag perception-tag--curve"><b>CURVATURE</b><span>R 420m</span></div>
-                <div class="perception-legend"><span><i></i>INPUT FRAME</span><span><i></i>DETECTED ROAD</span><span><i></i>MAP OUTPUT</span></div>
+                <div class="perception-panel perception-input">
+                  <div class="perception-panel__head"><span>01 / SENSOR INPUT</span><b>CAMERA + LiDAR</b></div>
+                  <div class="input-scan"></div>
+                  <span class="input-point input-point--1"></span><span class="input-point input-point--2"></span><span class="input-point input-point--3"></span>
+                  <div class="input-caption"><strong>SEE THE ROAD</strong><span>Raw pixels and point cloud</span></div>
+                </div>
+                <div class="perception-processor"><span>AI</span><strong>RECOGNIZE</strong><i></i><i></i><i></i></div>
+                <div class="perception-panel perception-output">
+                  <div class="perception-panel__head"><span>02 / STRUCTURED OUTPUT</span><b>MAP READY</b></div>
+                  <svg viewBox="0 0 420 280" preserveAspectRatio="none">
+                    <path class="output-road" d="M42 280 C88 214 139 183 199 150 C252 121 284 84 305 0 L379 0 C344 105 309 155 260 188 C197 230 160 252 141 280 Z" />
+                    <path class="output-edge" d="M42 280 C88 214 139 183 199 150 C252 121 284 84 305 0" />
+                    <path class="output-edge" d="M141 280 C160 252 197 230 260 188 C309 155 344 105 379 0" />
+                    <path class="output-center" d="M92 280 C126 232 169 205 229 170 C282 138 315 91 342 0" />
+                  </svg>
+                  <div class="output-tag output-tag--edge"><span>ROAD EDGE</span><b>99.2%</b></div>
+                  <div class="output-tag output-tag--lane"><span>LANE CENTER</span><b>98.8%</b></div>
+                  <div class="output-tag output-tag--curve"><span>CURVE</span><b>R 420m</b></div>
+                  <div class="output-caption"><strong>UNDERSTAND THE ROAD</strong><span>Geometry · topology · semantics</span></div>
+                </div>
               </div>
               <div class="tech-card__copy">
                 <h3 data-i18n="visionTitle">AI road recognition</h3>
@@ -335,10 +350,24 @@
 
             <article class="tech-card reveal">
               <div class="tech-card__top"><span>03 / PRODUCTION</span><span>AUTO-QA</span></div>
-              <div class="layers-visual" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><span>42 OBJECT LAYERS</span><small>TOPOLOGY / LANE / SIGN</small></div>
+              <div class="cartography-flow" aria-hidden="true">
+                <div class="carto-stage carto-stage--source">
+                  <div class="carto-stage__head"><span>01</span><b>ROAD CHANGE</b></div>
+                  <div class="carto-road"><i></i><i></i><em>NEW LANE</em></div>
+                  <small>Fleet observation</small>
+                </div>
+                <div class="carto-engine"><span>AI</span><b>EXTRACT</b><i></i></div>
+                <div class="carto-stage carto-stage--map">
+                  <div class="carto-stage__head"><span>02</span><b>HD MAP DELTA</b></div>
+                  <svg viewBox="0 0 220 150"><path d="M18 132 C58 93 73 83 112 72 C155 60 176 34 202 12"/><path d="M48 140 C77 109 91 100 124 91 C169 78 190 46 214 23"/><path class="carto-center" d="M32 137 C68 101 82 92 118 82 C162 69 183 41 208 18"/><circle cx="119" cy="82" r="6"/><rect x="158" y="50" width="13" height="13"/></svg>
+                  <small>Lane · sign · topology</small>
+                </div>
+                <div class="carto-qa"><span>✓</span><b>AUTO-QA PASSED</b><small>Confidence 99.4%</small></div>
+                <div class="carto-progress"><span class="is-done">INGEST</span><span class="is-done">EXTRACT</span><span class="is-done">VALIDATE</span><span class="is-live">PUBLISH</span></div>
+              </div>
               <div class="tech-card__copy">
                 <h3 data-i18n="cartographyTitle">Automated cartography</h3>
-                <p data-i18n="cartographyBody">AI-assisted production and human-in-the-loop QA turn map deltas into deployment-ready data.</p>
+                <p data-i18n="cartographyBody">Road changes are converted into structured lane, sign and topology layers, checked automatically and published as trusted map updates.</p>
               </div>
             </article>
 
