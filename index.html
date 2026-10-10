@@ -203,12 +203,19 @@
             <div class="console-grid">
               <div class="console-view">
                 <div class="console-badge"><i></i> LIVE INGEST</div>
+                <div class="console-world" aria-hidden="true">
+                  <div class="console-road console-road--left"></div>
+                  <div class="console-road console-road--right"></div>
+                  <div class="console-vehicle"><i class="vehicle-roof"></i><i class="vehicle-body"></i><i class="vehicle-light vehicle-light--l"></i><i class="vehicle-light vehicle-light--r"></i></div>
+                  <div class="console-radar"><i></i><i></i><i></i></div>
+                  <div class="console-beacon console-beacon--1"><span>SIGN / 98.4%</span></div>
+                  <div class="console-beacon console-beacon--2"><span>LANE / 99.8%</span></div>
+                </div>
                 <svg viewBox="0 0 700 320" preserveAspectRatio="none" aria-hidden="true">
                   <g class="console-lines"><path d="M0 277 190 148l88 45 143-96 279 119"/><path d="M0 235 190 106l88 45 143-96 279 119"/><path d="M115 320 280 195M320 320 440 190M496 320 600 210"/></g>
                   <path class="console-route" d="M0 255 190 126l88 45 143-96 279 119"/>
                   <g class="console-points"><circle cx="190" cy="126" r="4"/><circle cx="278" cy="171" r="4"/><circle cx="421" cy="75" r="4"/><circle cx="600" cy="169" r="4"/></g>
                 </svg>
-                <div class="console-car"><span></span></div>
               </div>
               <div class="console-data">
                 <div class="data-row"><span>LANE_GEOMETRY</span><strong>99.8%</strong></div>
@@ -251,7 +258,17 @@
                 <div class="road-overlay road-overlay--limit"><span>80</span><small>km/h</small></div>
                 <div class="road-overlay road-overlay--curve"><span>R 420m</span></div>
                 <div class="road-overlay road-overlay--lane"><span>LANE 02</span></div>
-                <div class="demo-truck"><span></span><i></i></div>
+                <div class="roadside roadside--left"><i></i><i></i><i></i><i></i></div>
+                <div class="roadside roadside--right"><i></i><i></i><i></i><i></i></div>
+                <div class="sensor-field" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+                <div class="vehicle-3d" aria-hidden="true">
+                  <div class="vehicle-shadow"></div>
+                  <div class="vehicle-cabin"><span class="vehicle-windshield"></span></div>
+                  <div class="vehicle-shell"><span class="vehicle-light vehicle-light--left"></span><span class="vehicle-light vehicle-light--right"></span></div>
+                  <span class="vehicle-wheel vehicle-wheel--left"></span><span class="vehicle-wheel vehicle-wheel--right"></span>
+                  <span class="lidar-unit"><i></i></span>
+                </div>
+                <div class="lidar-fan" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
                 <div class="screen-reticle"><i></i></div>
                 <div class="screen-coordinates">ALT 43.7m&nbsp;&nbsp; HDG 074.2°</div>
               </div>
@@ -302,7 +319,7 @@
 
             <article class="tech-card reveal reveal--delay">
               <div class="tech-card__top"><span>02 / FUSION</span><span>±0.03m</span></div>
-              <div class="fusion-orbit" aria-hidden="true"><i></i><i></i><i></i><span>FUSED</span></div>
+              <div class="fusion-orbit" aria-hidden="true"><i></i><i></i><i></i><div class="fusion-car"><span></span></div><b>12 VEHICLE TRACKS</b></div>
               <div class="tech-card__copy">
                 <h3 data-i18n="fusionTitle">Trajectory fusion</h3>
                 <p data-i18n="fusionBody">Cross-vehicle observations converge into one stable, confidence-scored road model.</p>
@@ -311,7 +328,7 @@
 
             <article class="tech-card reveal">
               <div class="tech-card__top"><span>03 / PRODUCTION</span><span>AUTO-QA</span></div>
-              <div class="layers-visual" aria-hidden="true"><i></i><i></i><i></i><span>42 OBJECT LAYERS</span></div>
+              <div class="layers-visual" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><span>42 OBJECT LAYERS</span><small>TOPOLOGY / LANE / SIGN</small></div>
               <div class="tech-card__copy">
                 <h3 data-i18n="cartographyTitle">Automated cartography</h3>
                 <p data-i18n="cartographyBody">AI-assisted production and human-in-the-loop QA turn map deltas into deployment-ready data.</p>
@@ -365,15 +382,33 @@
       </section>
 
       <section class="company" id="company">
-        <div class="company-orb" aria-hidden="true"></div>
+        <div class="company-media" aria-hidden="true"><div class="company-scan"></div></div>
         <div class="container company__inner reveal">
-          <div class="eyebrow"><span>06</span><span data-i18n="companyEyebrow">A different kind of map company</span></div>
-          <h2 data-i18n="companyTitle">The road changes<br />every second.<br /><em>The map keeps up.</em></h2>
-          <p data-i18n="companyBody">We unite geospatial production, applied AI and mobility engineering to build living road intelligence for the next generation of commercial transport.</p>
-          <button class="button button--light js-open-modal" type="button">
-            <span data-i18n="companyCta">Build with RoadGrids</span>
-            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>
-          </button>
+          <div class="company-main">
+            <div class="eyebrow"><span>06</span><span>About RoadGrids</span></div>
+            <p class="company-legal-name">HEBEI ROADGRIDS TECHNOLOGY CO., LTD.</p>
+            <h2>Mapping intelligence<br />for <em>autonomous mobility.</em></h2>
+            <p class="company-lede">Hebei Roadgrids Technology Co., Ltd. is a technology company specializing in autonomous-driving maps and surveying. We provide customized road-data services from sub-meter ADAS Map to centimeter-level HD Map.</p>
+            <div class="company-credentials">
+              <div><strong>CLASS A</strong><span>Navigation electronic map production qualification</span></div>
+              <div><strong>ADAS→HD</strong><span>Multi-level precision data services</span></div>
+              <div><strong>T+1</strong><span>Crowdsourced road-data update capability</span></div>
+            </div>
+            <button class="button button--light js-open-modal" type="button">
+              <span>Contact RoadGrids</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M11 6l4 4-4 4" /></svg>
+            </button>
+          </div>
+          <aside class="company-profile">
+            <div class="profile-head"><span>COMPANY PROFILE</span><span>CN / HEBEI</span></div>
+            <dl>
+              <div><dt>Core focus</dt><dd>Autonomous-driving maps<br />Geospatial data services</dd></div>
+              <div><dt>Technology</dt><dd>Computer vision · LiDAR<br />Deep learning · Edge computing</dd></div>
+              <div><dt>Production</dt><dd>Independent collection<br />Crowdsourced updates · Auto-QA</dd></div>
+              <div><dt>Headquarters</dt><dd>Shijiazhuang High-tech Zone<br />Hebei, China</dd></div>
+            </dl>
+            <div class="profile-memberships"><span>INDUSTRY ECOSYSTEM</span><p>China Society for Surveying, Mapping and Geoinformation</p><p>China ICV Industry Innovation Alliance</p></div>
+          </aside>
         </div>
       </section>
     </main>
@@ -389,7 +424,7 @@
           <div><span data-i18n="footerPlatform">PLATFORM</span><button class="footer-link" type="button" data-detail="map-engine">Map Engine</button><button class="footer-link" type="button" data-detail="data-pipeline">Data Pipeline</button><button class="footer-link" type="button" data-detail="developer-api">Developer API</button></div>
           <div><span data-i18n="footerSolutions">SOLUTIONS</span><button class="footer-link" type="button" data-detail="adas-map">ADAS Map</button><button class="footer-link" type="button" data-detail="hd-map">HD Map</button><button class="footer-link" type="button" data-detail="fleet-intelligence">Fleet Intelligence</button></div>
           <div><span data-i18n="footerCompany">COMPANY</span><button class="footer-link" type="button" data-detail="about">About</button><a href="mailto:contact@roadgrids.com?subject=Careers%20at%20ROADGRIDS">Careers</a><button class="footer-link js-open-modal" type="button">Contact</button></div>
-          <div class="footer-location"><span data-i18n="footerPresence">GLOBAL PRESENCE</span><p>Singapore<br />APAC delivery hub</p><p>Serving mobility teams worldwide</p></div>
+          <div class="footer-location"><span data-i18n="footerPresence">HEADQUARTERS</span><p>Shijiazhuang, Hebei<br />China</p><p>Serving mobility partners worldwide</p></div>
         </div>
         <div class="footer__bottom"><span>© 2026 ROADGRIDS. ALL RIGHTS RESERVED.</span><span class="footer-legal"><button type="button" data-detail="privacy">PRIVACY</button><button type="button" data-detail="terms">TERMS</button></span><a href="#top">BACK TO TOP ↑</a></div>
       </div>

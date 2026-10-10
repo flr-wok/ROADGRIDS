@@ -45,9 +45,9 @@ const detailContent = {
   },
   about: {
     kicker: "COMPANY / ABOUT",
-    title: "AI-native road intelligence.",
-    copy: "RoadGrids is an AI mapping company built around proven high-precision mapping, automated cartography and crowdsourced update capabilities.",
-    points: [["AI", "Spatial perception"], ["MAP", "Production expertise"], ["GLOBAL", "Delivery mindset"]]
+    title: "Hebei Roadgrids Technology Co., Ltd.",
+    copy: "A technology company specializing in autonomous-driving maps and surveying, with customized data services spanning sub-meter ADAS Map and centimeter-level HD Map production.",
+    points: [["CLASS A", "Navigation map qualification"], ["ADAS→HD", "Multi-level precision"], ["T+1", "Road-data updates"]]
   },
   privacy: {
     kicker: "LEGAL / PRIVACY",
